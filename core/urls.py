@@ -1,9 +1,10 @@
 from django_distill import distill_path
 from .views import index
-from .distill import get_index_urls
 
 app_name = "core"
 
 urlpatterns = [
-    distill_path("", index, name="index", distill_func=get_index_urls),
+    distill_path("en/", index, name="index_en"),
+    distill_path("ru/", index, name="index_ru"),
+    distill_path("uk/", index, name="index_uk"),
 ]
