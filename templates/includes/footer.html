@@ -1,0 +1,33 @@
+{% load i18n %}
+<footer class="bg-gray-800 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-lg font-semibold mb-4">{% trans "Platform" %}</h3>
+                <p class="text-gray-400 text-sm">
+                    {% trans "Building the future of digital solutions." %}
+                </p>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold mb-4">{% trans "Quick Links" %}</h3>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                    <li><a href="#features" class="hover:text-white transition-colors">{% trans "Features" %}</a></li>
+                    <li><a href="#cta" class="hover:text-white transition-colors">{% trans "Get Started" %}</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="text-lg font-semibold mb-4">{% trans "Contact" %}</h3>
+                <p class="text-gray-400 text-sm">
+                    {% trans "Email:" %} info@platform.com<br>
+                    {% trans "Phone:" %} +1 (555) 123-4567
+                </p>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+            <p>&copy; {% now "Y" %} {% trans "Platform" %}. {% trans "All rights reserved." %}</p>
+        </div>
+    </div>
+</footer>

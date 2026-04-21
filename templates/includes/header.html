@@ -1,0 +1,34 @@
+{% load i18n %}
+<header class="bg-white shadow-sm">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex items-center">
+                <a href="/" class="text-xl font-bold text-indigo-600">
+                    {% trans "Platform" %}
+                </a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <!-- Language Switcher -->
+                <form action="{% url 'set_language' %}" method="post" class="inline">
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                    <select name="language" onchange="this.form.submit()" 
+                            class="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        {% get_current_language as CURRENT_LANGUAGE %}
+                        {% get_available_languages as AVAILABLE_LANGUAGES %}
+                        {% for lang_code, lang_name in AVAILABLE_LANGUAGES %}
+                            <option value="{{ lang_code }}" {% if lang_code == CURRENT_LANGUAGE %}selected{% endif %}>
+                                {{ lang_name }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </form>
+                
+                <a href="#cta" class="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 transition-colors">
+                    {% trans "Get Started" %}
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
