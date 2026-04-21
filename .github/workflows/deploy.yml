@@ -4,14 +4,13 @@ on:
   push:
     branches:
       - main
-
-
       - djangolandingpagei18nproject-14a6d
   workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -30,11 +29,6 @@ jobs:
         run: python manage.py compilemessages
         continue-on-error: true
 
-      - name: Collect static files
-        run: python manage.py collectstatic --noinput
-        env:
-          DJANGO_SETTINGS_MODULE: config.prod
-
       - name: Generate static site
         run: python manage.py distill-local dist --force
         env:
@@ -43,7 +37,7 @@ jobs:
       - name: Add .nojekyll
         run: touch dist/.nojekyll
 
-      - name: Deploy
+      - name: Deploy to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
