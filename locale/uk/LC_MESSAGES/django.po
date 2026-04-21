@@ -1,0 +1,86 @@
+# Ukrainian translations for landing page
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"Last-Translator: \n"
+"Language: uk\n"
+"Language-Team: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "Welcome to Our Platform"
+msgstr "Ласкаво просимо на нашу платформу"
+
+msgid "Platform"
+msgstr "Платформа"
+
+msgid "Get Started"
+msgstr "Почати"
+
+msgid "Build Something Amazing"
+msgstr "Створіть щось дивовижне"
+
+msgid "The fastest way to create powerful digital solutions for your business."
+msgstr "Найшвидший спосіб створити потужні цифрові рішення для вашого бізнесу."
+
+msgid "Start Now"
+msgstr "Почати зараз"
+
+msgid "Why Choose Us"
+msgstr "Чому обирають нас"
+
+msgid "Discover the features that make our platform stand out."
+msgstr "Дізнайтеся про функції, які виділяють нашу платформу."
+
+msgid "Lightning Fast"
+msgstr "Блискавична швидкість"
+
+msgid "Optimized performance for the best user experience."
+msgstr "Оптимізована продуктивність для найкращого користувацького досвіду."
+
+msgid "Secure by Default"
+msgstr "Безпека за замовчуванням"
+
+msgid "Enterprise-grade security to protect your data."
+msgstr "Корпоративний рівень безпеки для захисту ваших даних."
+
+msgid "Flexible Layout"
+msgstr "Гнучка структура"
+
+msgid "Customize everything to match your brand."
+msgstr "Налаштуйте все під свій бренд."
+
+msgid "Ready to Get Started?"
+msgstr "Готові почати?"
+
+msgid "Join thousands of satisfied customers today."
+msgstr "Приєднуйтесь до тисяч задоволених клієнтів вже сьогодні."
+
+msgid "Enter your email"
+msgstr "Введіть ваш email"
+
+msgid "Subscribe"
+msgstr "Підписатися"
+
+msgid "Quick Links"
+msgstr "Швидкі посилання"
+
+msgid "Features"
+msgstr "Переваги"
+
+msgid "Contact"
+msgstr "Контакти"
+
+msgid "Email:"
+msgstr "Email:"
+
+msgid "Phone:"
+msgstr "Телефон:"
+
+msgid "All rights reserved."
+msgstr "Всі права захищено."
+
+msgid "Building the future of digital solutions."
+msgstr "Створюємо майбутнє цифрових рішень."

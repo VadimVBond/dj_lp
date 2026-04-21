@@ -19,6 +19,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_distill',
     'core',
 ]
 
@@ -103,3 +104,8 @@ STATICFILES_DIRS = [
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Django Distill settings
+DISTILL_OUTPUT_DIR = BASE_DIR / 'dist'
+DISTILL_BASE_URL = '/'
+DISTILL_DIR_NAME = ''

@@ -6,13 +6,13 @@
 <section class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-4xl md:text-5xl font-bold mb-6">
-            {% trans "Build Something Amazing" %}
+            {{ hero_title }}
         </h1>
         <p class="text-xl md:text-2xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-            {% trans "The fastest way to create powerful digital solutions for your business." %}
+            {{ hero_subtitle }}
         </p>
         <a href="#cta" class="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg">
-            {% trans "Start Now" %}
+            {{ start_now }}
         </a>
     </div>
 </section>
@@ -22,10 +22,10 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                {% trans "Why Choose Us" %}
+                {{ features_title }}
             </h2>
             <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                {% trans "Discover the features that make our platform stand out." %}
+                {{ features_subtitle }}
             </p>
         </div>
         
@@ -38,10 +38,10 @@
                     </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">
-                    {% trans "Lightning Fast" %}
+                    {{ feature_1_title }}
                 </h3>
                 <p class="text-gray-600">
-                    {% trans "Optimized performance for the best user experience." %}
+                    {{ feature_1_desc }}
                 </p>
             </div>
             
@@ -53,10 +53,10 @@
                     </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">
-                    {% trans "Secure by Default" %}
+                    {{ feature_2_title }}
                 </h3>
                 <p class="text-gray-600">
-                    {% trans "Enterprise-grade security to protect your data." %}
+                    {{ feature_2_desc }}
                 </p>
             </div>
             
@@ -68,10 +68,10 @@
                     </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900 mb-2">
-                    {% trans "Flexible Layout" %}
+                    {{ feature_3_title }}
                 </h3>
                 <p class="text-gray-600">
-                    {% trans "Customize everything to match your brand." %}
+                    {{ feature_3_desc }}
                 </p>
             </div>
         </div>
@@ -82,16 +82,16 @@
 <section id="cta" class="py-20 bg-gray-50">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {% trans "Ready to Get Started?" %}
+            {{ cta_title }}
         </h2>
         <p class="text-xl text-gray-600 mb-8">
-            {% trans "Join thousands of satisfied customers today." %}
+            {{ cta_subtitle }}
         </p>
         <form class="flex flex-col sm:flex-row gap-4 justify-center">
-            <input type="email" placeholder="{% trans 'Enter your email' %}" 
+            <input type="email" placeholder="{{ email_placeholder }}" 
                    class="px-6 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full sm:w-auto min-w-[300px]">
             <button type="submit" class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
-                {% trans "Subscribe" %}
+                {{ subscribe }}
             </button>
         </form>
     </div>

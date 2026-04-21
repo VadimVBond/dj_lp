@@ -1,20 +1,16 @@
 """
-Django production settings.
+Django production settings for static site export.
 """
 from .base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['yourdomain.com', 'www.yourdomain.com']
+ALLOWED_HOSTS = ['*']
 
-SECURE_SSL_REDIRECT = True
+# For GitHub Pages deployment, use relative URLs
+FORCE_SCRIPT_NAME = None
+STATIC_URL = 'static/'
 
-SESSION_COOKIE_SECURE = True
-
-CSRF_COOKIE_SECURE = True
-
-SECURE_HSTS_SECONDS = 31536000
-
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-
-SECURE_HSTS_PRELOAD = True
+# Distill settings for production
+DISTILL_OUTPUT_DIR = BASE_DIR / 'dist'
+DISTILL_BASE_URL = '/'

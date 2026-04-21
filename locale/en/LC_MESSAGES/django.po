@@ -1,0 +1,86 @@
+# English translations for landing page
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"Last-Translator: \n"
+"Language: en\n"
+"Language-Team: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Welcome to Our Platform"
+msgstr "Welcome to Our Platform"
+
+msgid "Platform"
+msgstr "Platform"
+
+msgid "Get Started"
+msgstr "Get Started"
+
+msgid "Build Something Amazing"
+msgstr "Build Something Amazing"
+
+msgid "The fastest way to create powerful digital solutions for your business."
+msgstr "The fastest way to create powerful digital solutions for your business."
+
+msgid "Start Now"
+msgstr "Start Now"
+
+msgid "Why Choose Us"
+msgstr "Why Choose Us"
+
+msgid "Discover the features that make our platform stand out."
+msgstr "Discover the features that make our platform stand out."
+
+msgid "Lightning Fast"
+msgstr "Lightning Fast"
+
+msgid "Optimized performance for the best user experience."
+msgstr "Optimized performance for the best user experience."
+
+msgid "Secure by Default"
+msgstr "Secure by Default"
+
+msgid "Enterprise-grade security to protect your data."
+msgstr "Enterprise-grade security to protect your data."
+
+msgid "Flexible Layout"
+msgstr "Flexible Layout"
+
+msgid "Customize everything to match your brand."
+msgstr "Customize everything to match your brand."
+
+msgid "Ready to Get Started?"
+msgstr "Ready to Get Started?"
+
+msgid "Join thousands of satisfied customers today."
+msgstr "Join thousands of satisfied customers today."
+
+msgid "Enter your email"
+msgstr "Enter your email"
+
+msgid "Subscribe"
+msgstr "Subscribe"
+
+msgid "Quick Links"
+msgstr "Quick Links"
+
+msgid "Features"
+msgstr "Features"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Email:"
+msgstr "Email:"
+
+msgid "Phone:"
+msgstr "Phone:"
+
+msgid "All rights reserved."
+msgstr "All rights reserved."
+
+msgid "Building the future of digital solutions."
+msgstr "Building the future of digital solutions."

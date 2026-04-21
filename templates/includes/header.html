@@ -3,16 +3,16 @@
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex items-center">
-                <a href="/" class="text-xl font-bold text-indigo-600">
+                <a href="../" class="text-xl font-bold text-indigo-600">
                     {% trans "Platform" %}
                 </a>
             </div>
             
             <div class="flex items-center space-x-4">
                 <!-- Language Switcher -->
-                <form action="{% url 'set_language' %}" method="post" class="inline">
+                <form action="../i18n/setlang/" method="post" class="inline">
                     {% csrf_token %}
-                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                    <input name="next" type="hidden" value="{{ request.path }}">
                     <select name="language" onchange="this.form.submit()" 
                             class="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
                         {% get_current_language as CURRENT_LANGUAGE %}
