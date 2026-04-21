@@ -1,0 +1,46 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - djangolandingpagei18nproject-14a6d
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Compile messages
+        run: python manage.py compilemessages
+        continue-on-error: true
+
+      - name: Collect static files
+        run: python manage.py collectstatic --noinput
+        env:
+          DJANGO_SETTINGS_MODULE: config.prod
+
+      - name: Generate static site
+        run: python manage.py distill-local dist --force
+        env:
+          DJANGO_SETTINGS_MODULE: config.prod
+
+      - name: Add .nojekyll
+        run: touch dist/.nojekyll
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist

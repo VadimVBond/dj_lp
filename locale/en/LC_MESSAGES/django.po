@@ -1,62 +1,50 @@
-# English translations for landing page
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.0\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-01 00:00+0000\n"
-"PO-Revision-Date: 2024-01-01 00:00+0000\n"
-"Last-Translator: \n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Language: en\n"
-"Language-Team: en\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgid "Welcome to Our Platform"
-msgstr "Welcome to Our Platform"
+msgid "Landing Page"
+msgstr "Landing Page"
 
-msgid "Platform"
-msgstr "Platform"
+msgid "Modern Solutions for Your Business"
+msgstr "Modern Solutions for Your Business"
 
-msgid "Get Started"
-msgstr "Get Started"
-
-msgid "Build Something Amazing"
-msgstr "Build Something Amazing"
-
-msgid "The fastest way to create powerful digital solutions for your business."
-msgstr "The fastest way to create powerful digital solutions for your business."
+msgid "We help you build better products with our advanced framework and expert consulting."
+msgstr "We help you build better products with our advanced framework and expert consulting."
 
 msgid "Start Now"
 msgstr "Start Now"
 
-msgid "Why Choose Us"
-msgstr "Why Choose Us"
+msgid "Our Features"
+msgstr "Our Features"
 
-msgid "Discover the features that make our platform stand out."
-msgstr "Discover the features that make our platform stand out."
+msgid "Discover why thousands of companies choose our platform for their digital needs."
+msgstr "Discover why thousands of companies choose our platform for their digital needs."
 
-msgid "Lightning Fast"
-msgstr "Lightning Fast"
+msgid "High Performance"
+msgstr "High Performance"
 
-msgid "Optimized performance for the best user experience."
-msgstr "Optimized performance for the best user experience."
+msgid "Lightning fast response times and optimized resource usage."
+msgstr "Lightning fast response times and optimized resource usage."
 
-msgid "Secure by Default"
-msgstr "Secure by Default"
+msgid "Secure by Design"
+msgstr "Secure by Design"
 
-msgid "Enterprise-grade security to protect your data."
-msgstr "Enterprise-grade security to protect your data."
+msgid "Enterprise-grade security features built into every layer."
+msgstr "Enterprise-grade security features built into every layer."
 
-msgid "Flexible Layout"
-msgstr "Flexible Layout"
+msgid "Easy Integration"
+msgstr "Easy Integration"
 
-msgid "Customize everything to match your brand."
-msgstr "Customize everything to match your brand."
+msgid "Connect with your favorite tools in minutes, not days."
+msgstr "Connect with your favorite tools in minutes, not days."
 
-msgid "Ready to Get Started?"
-msgstr "Ready to Get Started?"
+msgid "Ready to get started?"
+msgstr "Ready to get started?"
 
-msgid "Join thousands of satisfied customers today."
-msgstr "Join thousands of satisfied customers today."
+msgid "Join our newsletter to stay updated with the latest news and offers."
+msgstr "Join our newsletter to stay updated with the latest news and offers."
 
 msgid "Enter your email"
 msgstr "Enter your email"
@@ -64,23 +52,8 @@ msgstr "Enter your email"
 msgid "Subscribe"
 msgstr "Subscribe"
 
-msgid "Quick Links"
-msgstr "Quick Links"
-
-msgid "Features"
-msgstr "Features"
-
-msgid "Contact"
-msgstr "Contact"
-
-msgid "Email:"
-msgstr "Email:"
-
-msgid "Phone:"
-msgstr "Phone:"
-
 msgid "All rights reserved."
 msgstr "All rights reserved."
 
-msgid "Building the future of digital solutions."
-msgstr "Building the future of digital solutions."
+msgid "English"
+msgstr "English"

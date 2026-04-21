@@ -1,15 +1,29 @@
-"""
-URL configuration for landing_project project.
-"""
-from django.contrib import admin
-from django.urls import path, include
 from django.conf.urls.i18n import i18n_patterns
+from django.urls import path, include
+from django.http import HttpResponse
+from django_distill import distill_path
+
+
+def get_root():
+    return None
+
+
+def root_static_redirect(request):
+    return HttpResponse(
+        '<html><head><meta http-equiv="refresh" content="0; url=en/"></head></html>'
+    )
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    distill_path(
+        "",
+        root_static_redirect,
+        name="root_redirect",
+        distill_func=get_root,
+        distill_file="index.html"
+    ),
 ]
 
-# i18n patterns with language prefixes
 urlpatterns += i18n_patterns(
-    path('', include('core.urls')),
+    path("", include("core.urls")),
 )

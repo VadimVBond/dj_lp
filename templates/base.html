@@ -1,3 +1,4 @@
+{% load static %}
 {% load i18n %}
 <!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}">
@@ -6,17 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{{ page_title }}{% endblock %}</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <base href="../">
 </head>
 <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
     {% include 'includes/header.html' %}
-    
     <main class="flex-grow">
         {% block content %}{% endblock %}
     </main>
-    
     {% include 'includes/footer.html' %}
-    
     <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

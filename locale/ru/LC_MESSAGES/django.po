@@ -1,62 +1,50 @@
-# Russian translations for landing page
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.0\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-01 00:00+0000\n"
-"PO-Revision-Date: 2024-01-01 00:00+0000\n"
-"Last-Translator: \n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Language: ru\n"
-"Language-Team: ru\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-msgid "Welcome to Our Platform"
-msgstr "Добро пожаловать на нашу платформу"
+msgid "Landing Page"
+msgstr "Лендинг"
 
-msgid "Platform"
-msgstr "Платформа"
+msgid "Modern Solutions for Your Business"
+msgstr "Современные решения для вашего бизнеса"
 
-msgid "Get Started"
-msgstr "Начать"
-
-msgid "Build Something Amazing"
-msgstr "Создайте что-то удивительное"
-
-msgid "The fastest way to create powerful digital solutions for your business."
-msgstr "Самый быстрый способ создать мощные цифровые решения для вашего бизнеса."
+msgid "We help you build better products with our advanced framework and expert consulting."
+msgstr "Мы помогаем создавать лучшие продукты с помощью нашего фреймворка и экспертного консультирования."
 
 msgid "Start Now"
 msgstr "Начать сейчас"
 
-msgid "Why Choose Us"
-msgstr "Почему выбирают нас"
+msgid "Our Features"
+msgstr "Наши преимущества"
 
-msgid "Discover the features that make our platform stand out."
-msgstr "Узнайте о функциях, которые выделяют нашу платформу."
+msgid "Discover why thousands of companies choose our platform for their digital needs."
+msgstr "Узнайте, почему тысячи компаний выбирают нашу платформу для своих цифровых нужд."
 
-msgid "Lightning Fast"
-msgstr "Молниеносная скорость"
+msgid "High Performance"
+msgstr "Высокая производительность"
 
-msgid "Optimized performance for the best user experience."
-msgstr "Оптимизированная производительность для лучшего пользовательского опыта."
+msgid "Lightning fast response times and optimized resource usage."
+msgstr "Молниеносное время отклика и оптимизированное использование ресурсов."
 
-msgid "Secure by Default"
+msgid "Secure by Design"
 msgstr "Безопасность по умолчанию"
 
-msgid "Enterprise-grade security to protect your data."
-msgstr "Корпоративный уровень безопасности для защиты ваших данных."
+msgid "Enterprise-grade security features built into every layer."
+msgstr "Функции безопасности корпоративного уровня, встроенные в каждый уровень."
 
-msgid "Flexible Layout"
-msgstr "Гибкая структура"
+msgid "Easy Integration"
+msgstr "Простая интеграция"
 
-msgid "Customize everything to match your brand."
-msgstr "Настройте всё под свой бренд."
+msgid "Connect with your favorite tools in minutes, not days."
+msgstr "Подключайтесь к любимым инструментам за минуты, а не дни."
 
-msgid "Ready to Get Started?"
+msgid "Ready to get started?"
 msgstr "Готовы начать?"
 
-msgid "Join thousands of satisfied customers today."
-msgstr "Присоединяйтесь к тысячам довольных клиентов уже сегодня."
+msgid "Join our newsletter to stay updated with the latest news and offers."
+msgstr "Подпишитесь на нашу рассылку, чтобы быть в курсе последних новостей и предложений."
 
 msgid "Enter your email"
 msgstr "Введите ваш email"
@@ -64,23 +52,14 @@ msgstr "Введите ваш email"
 msgid "Subscribe"
 msgstr "Подписаться"
 
-msgid "Quick Links"
-msgstr "Быстрые ссылки"
+msgid "All rights reserved."
+msgstr "Все права защищены."
+
+msgid "Russian"
+msgstr "Русский"
 
 msgid "Features"
 msgstr "Преимущества"
 
-msgid "Contact"
-msgstr "Контакты"
-
-msgid "Email:"
-msgstr "Email:"
-
-msgid "Phone:"
-msgstr "Телефон:"
-
-msgid "All rights reserved."
-msgstr "Все права защищены."
-
-msgid "Building the future of digital solutions."
-msgstr "Создаем будущее цифровых решений."
+msgid "Built with Django & Tailwind"
+msgstr "Создано на Django и Tailwind"

@@ -1,34 +1,27 @@
 {% load i18n %}
-<header class="bg-white shadow-sm">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex items-center">
-                <a href="../" class="text-xl font-bold text-indigo-600">
-                    {% trans "Platform" %}
-                </a>
+<header class="bg-white border-b sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+            <div class="flex-shrink-0 flex items-center">
+                <span class="text-2xl font-bold text-indigo-600">LP.Project</span>
             </div>
-            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#features" class="text-gray-600 hover:text-indigo-600">{% trans "Features" %}</a>
+                <a href="#cta" class="text-gray-600 hover:text-indigo-600">{% trans "Subscribe" %}</a>
+            </nav>
             <div class="flex items-center space-x-4">
-                <!-- Language Switcher -->
-                <form action="../i18n/setlang/" method="post" class="inline">
-                    {% csrf_token %}
-                    <input name="next" type="hidden" value="{{ request.path }}">
-                    <select name="language" onchange="this.form.submit()" 
-                            class="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                        {% get_current_language as CURRENT_LANGUAGE %}
-                        {% get_available_languages as AVAILABLE_LANGUAGES %}
-                        {% for lang_code, lang_name in AVAILABLE_LANGUAGES %}
-                            <option value="{{ lang_code }}" {% if lang_code == CURRENT_LANGUAGE %}selected{% endif %}>
-                                {{ lang_name }}
-                            </option>
-                        {% endfor %}
-                    </select>
-                </form>
-                
-                <a href="#cta" class="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 transition-colors">
-                    {% trans "Get Started" %}
-                </a>
+                <div class="flex bg-gray-100 rounded-lg p-1">
+                    {% get_available_languages as languages %}
+                    {% for lang_code, lang_name in languages %}
+                        {% language lang_code %}
+                        <a href="{% url 'core:index' %}" 
+                           class="px-3 py-1 text-sm rounded-md {% if LANGUAGE_CODE == lang_code %}bg-white shadow-sm{% endif %}">
+                            {{ lang_code|upper }}
+                        </a>
+                        {% endlanguage %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
-    </nav>
+    </div>
 </header>

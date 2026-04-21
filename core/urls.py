@@ -1,9 +1,9 @@
-from django.urls import path
-from django.utils.translation import gettext_lazy as _
-from core import views
+from django_distill import distill_path
+from .views import index
+from .distill import get_index_urls
 
-app_name = 'core'
+app_name = "core"
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    distill_path("", index, name="index", distill_func=get_index_urls),
 ]

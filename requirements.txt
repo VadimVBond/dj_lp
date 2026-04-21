@@ -1,0 +1,4 @@
+Django>=4.2
+django-distill>=3.0.0
+django-environ
+whitenoise
