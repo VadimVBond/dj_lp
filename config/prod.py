@@ -5,4 +5,4 @@ ALLOWED_HOSTS = ["*"]
 
 # GitHub Pages subpath (repository name)
 FORCE_SCRIPT_NAME = "/dj_lp/"
-STATIC_URL = f"{FORCE_SCRIPT_NAME}static/"
+STATIC_URL = "/static/"
