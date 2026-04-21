@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+
+
       - djangolandingpagei18nproject-14a6d
   workflow_dispatch:
 
