@@ -7,6 +7,9 @@ on:
       - djangolandingpagei18nproject-14a6d
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
