@@ -31,6 +31,11 @@ jobs:
         env:
           DJANGO_SETTINGS_MODULE: config.prod
 
+      - name: Collect static files
+        run: python manage.py collectstatic --noinput
+        env:
+          DJANGO_SETTINGS_MODULE: config.prod
+
       - name: Generate static site
         run: python manage.py distill-local dist --force
         env:
