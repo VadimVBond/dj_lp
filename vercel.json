@@ -1,14 +1,10 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "landing_project/wsgi.py",
-      "use": "@vercel/python",
-      "config": {
-        "runtime": "python3.11"
-      }
+  "functions": {
+    "landing_project/wsgi.py": {
+      "runtime": "@vercel/python"
     }
-  ],
+  },
   "routes": [
     {
       "src": "/static/(.*)",
