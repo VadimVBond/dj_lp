@@ -1,80 +1,108 @@
 
 
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лендинг</title>
+    
+    <!-- Theme initialization script (prevents FOUC) -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const theme = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['selector', '[data-theme="dark"]'],
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            bg: '#0f172a',
+                            text: '#ffffff'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="/dj_lp/static/css/style.css">
 </head>
-<body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
+<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 flex flex-col min-h-screen transition-colors duration-300">
     
 
-<header class="bg-white border-b sticky top-0 z-50">
+<header class="bg-white dark:bg-slate-900 border-b dark:border-slate-800 sticky top-0 z-50 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div class="flex justify-between h-16 items-center">
 
             <!-- Logo -->
             <div class="flex-shrink-0 flex items-center">
-                <a href="/dj_lp/ru/" class="text-2xl font-bold text-indigo-600">
+                <a href="/dj_lp/ru/" class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
                     LP.Project
                 </a>
             </div>
 
             <!-- Navigation -->
             <nav class="hidden md:flex space-x-8">
-                <a href="#features" class="text-gray-600 hover:text-indigo-600">
+                <a href="#features" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
                     Преимущества
                 </a>
-                <a href="#cta" class="text-gray-600 hover:text-indigo-600">
+                <a href="#cta" class="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
                     Подписаться
                 </a>
             </nav>
 
-            <!-- Language switcher -->
-            <div class="flex items-center space-x-2 bg-gray-100 rounded-lg p-1">
-
+            <!-- Language switcher & Theme toggle -->
+            <div class="flex items-center space-x-4">
                 
+                <div class="flex items-center space-x-2 bg-gray-100 dark:bg-slate-800 rounded-lg p-1">
+                    
+                    
+                        <a href="/dj_lp/en/"
+                           class="px-3 py-1 text-sm rounded-md transition
+                                  
+                                  text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400
+                                  ">
+                            EN
+                        </a>
+                    
+                        <a href="/dj_lp/ru/"
+                           class="px-3 py-1 text-sm rounded-md transition
+                                  
+                                  bg-white dark:bg-slate-700 shadow text-indigo-600 dark:text-indigo-400
+                                  ">
+                            RU
+                        </a>
+                    
+                        <a href="/dj_lp/uk/"
+                           class="px-3 py-1 text-sm rounded-md transition
+                                  
+                                  text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400
+                                  ">
+                            UK
+                        </a>
+                    
+                </div>
 
-                
-
-                    <a href="/dj_lp/en/"
-                       class="px-3 py-1 text-sm rounded-md transition
-                              
-                              text-gray-600 hover:text-indigo-600
-                              ">
-
-                        EN
-
-                    </a>
-
-                
-
-                    <a href="/dj_lp/ru/"
-                       class="px-3 py-1 text-sm rounded-md transition
-                              
-                              bg-white shadow text-indigo-600
-                              ">
-
-                        RU
-
-                    </a>
-
-                
-
-                    <a href="/dj_lp/uk/"
-                       class="px-3 py-1 text-sm rounded-md transition
-                              
-                              text-gray-600 hover:text-indigo-600
-                              ">
-
-                        UK
-
-                    </a>
-
-                
+                <button id="theme-toggle" 
+                        class="p-2 rounded-lg bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                        aria-label="Toggle Theme">
+                    <!-- Sun icon -->
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"></path>
+                    </svg>
+                    <!-- Moon icon -->
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                </button>
 
             </div>
 
@@ -84,7 +112,7 @@
     <main class="flex-grow">
         
 <!-- Hero Section -->
-<section class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20">
+<section class="bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-950 dark:to-purple-950 text-white py-20 transition-colors duration-500">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-4xl md:text-5xl font-bold mb-6">
             Современные решения для вашего бизнеса
@@ -99,13 +127,13 @@
 </section>
 
 <!-- Features Section -->
-<section id="features" class="py-20 bg-white">
+<section id="features" class="py-20 bg-white dark:bg-slate-900 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                 Наши преимущества
             </h2>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                 Узнайте, почему тысячи компаний выбирают нашу платформу для своих цифровых нужд.
             </p>
         </div>
@@ -113,45 +141,45 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Feature 1 -->
             <div class="text-center p-6">
-                <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                     Высокая производительность
                 </h3>
-                <p class="text-gray-600">
+                <p class="text-gray-600 dark:text-gray-400">
                     Молниеносное время отклика и оптимизированное использование ресурсов.
                 </p>
             </div>
             
             <!-- Feature 2 -->
             <div class="text-center p-6">
-                <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                     Безопасность по умолчанию
                 </h3>
-                <p class="text-gray-600">
+                <p class="text-gray-600 dark:text-gray-400">
                     Функции безопасности корпоративного уровня, встроенные в каждый уровень.
                 </p>
             </div>
             
             <!-- Feature 3 -->
             <div class="text-center p-6">
-                <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                     Простая интеграция
                 </h3>
-                <p class="text-gray-600">
+                <p class="text-gray-600 dark:text-gray-400">
                     Подключайтесь к любимым инструментам за минуты, а не дни.
                 </p>
             </div>
@@ -160,17 +188,17 @@
 </section>
 
 <!-- CTA Section -->
-<section id="cta" class="py-20 bg-gray-50">
+<section id="cta" class="py-20 bg-gray-50 dark:bg-slate-800/50 transition-colors">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Готовы начать?
         </h2>
-        <p class="text-xl text-gray-600 mb-8">
+        <p class="text-xl text-gray-600 dark:text-gray-400 mb-8">
             Подпишитесь на нашу рассылку, чтобы быть в курсе последних новостей и предложений.
         </p>
         <form class="flex flex-col sm:flex-row gap-4 justify-center">
             <input type="email" placeholder="Введите ваш email" 
-                   class="px-6 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full sm:w-auto min-w-[300px]">
+                   class="px-6 py-3 rounded-lg border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full sm:w-auto min-w-[300px]">
             <button type="submit" class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
                 Подписаться
             </button>
@@ -180,7 +208,7 @@
 
     </main>
     
-<footer class="bg-white border-t py-12">
+<footer class="bg-white dark:bg-slate-900 border-t dark:border-slate-800 py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row justify-between items-center">
             <div class="text-gray-500 text-sm">
