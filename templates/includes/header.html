@@ -7,9 +7,9 @@
 
             <!-- Logo -->
             <div class="flex-shrink-0 flex items-center">
-                <span class="text-2xl font-bold text-indigo-600">
+                <a href="{{ request.META.SCRIPT_NAME|default:"/" }}{{ LANGUAGE_CODE }}/" class="text-2xl font-bold text-indigo-600">
                     LP.Project
-                </span>
+                </a>
             </div>
 
             <!-- Navigation -->
@@ -29,7 +29,7 @@
 
                 {% for lang_code, lang_name in languages %}
 
-                    <a href="/{{ lang_code }}/"
+                    <a href="{{ request.META.SCRIPT_NAME|default:"/" }}{{ lang_code }}/"
                        class="px-3 py-1 text-sm rounded-md transition
                               {% if LANGUAGE_CODE == lang_code %}
                               bg-white shadow text-indigo-600
