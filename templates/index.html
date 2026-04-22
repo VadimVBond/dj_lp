@@ -4,7 +4,7 @@
 
 {% block content %}
 <!-- Hero Section -->
-<section class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20">
+<section class="bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-950 dark:to-purple-950 text-white py-20 transition-colors duration-500">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-4xl md:text-5xl font-bold mb-6">
             {{ hero_title }}
@@ -19,13 +19,13 @@
 </section>
 
 <!-- Features Section -->
-<section id="features" class="py-20 bg-white">
+<section id="features" class="py-20 bg-white dark:bg-slate-900 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                 {{ features_title }}
             </h2>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                 {{ features_subtitle }}
             </p>
         </div>
@@ -33,45 +33,45 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Feature 1 -->
             <div class="text-center p-6">
-                <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                     {{ feature_1_title }}
                 </h3>
-                <p class="text-gray-600">
+                <p class="text-gray-600 dark:text-gray-400">
                     {{ feature_1_desc }}
                 </p>
             </div>
             
             <!-- Feature 2 -->
             <div class="text-center p-6">
-                <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                     {{ feature_2_title }}
                 </h3>
-                <p class="text-gray-600">
+                <p class="text-gray-600 dark:text-gray-400">
                     {{ feature_2_desc }}
                 </p>
             </div>
             
             <!-- Feature 3 -->
             <div class="text-center p-6">
-                <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                     {{ feature_3_title }}
                 </h3>
-                <p class="text-gray-600">
+                <p class="text-gray-600 dark:text-gray-400">
                     {{ feature_3_desc }}
                 </p>
             </div>
@@ -80,17 +80,17 @@
 </section>
 
 <!-- CTA Section -->
-<section id="cta" class="py-20 bg-gray-50">
+<section id="cta" class="py-20 bg-gray-50 dark:bg-slate-800/50 transition-colors">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             {{ cta_title }}
         </h2>
-        <p class="text-xl text-gray-600 mb-8">
+        <p class="text-xl text-gray-600 dark:text-gray-400 mb-8">
             {{ cta_subtitle }}
         </p>
         <form class="flex flex-col sm:flex-row gap-4 justify-center">
             <input type="email" placeholder="{{ email_placeholder }}" 
-                   class="px-6 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full sm:w-auto min-w-[300px]">
+                   class="px-6 py-3 rounded-lg border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full sm:w-auto min-w-[300px]">
             <button type="submit" class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
                 {{ subscribe }}
             </button>
