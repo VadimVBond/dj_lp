@@ -94,6 +94,8 @@ TIME_ZONE = "UTC"
 USE_TZ = True
 
 STATIC_URL = os.environ.get("STATIC_URL", "/static/")
+if not STATIC_URL.endswith("/"):
+    STATIC_URL += "/"
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
