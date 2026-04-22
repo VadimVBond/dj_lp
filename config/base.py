@@ -93,9 +93,8 @@ LOCALE_PATHS = [
 TIME_ZONE = "UTC"
 USE_TZ = True
 
-STATIC_URL = os.environ.get("STATIC_URL", "/static/")
-if not STATIC_URL.endswith("/"):
-    STATIC_URL += "/"
+# Relative static URL for portability across i18n folders
+STATIC_URL = "static/"
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
