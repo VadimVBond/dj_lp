@@ -3,7 +3,12 @@ from django.utils.translation import gettext as _
 from django.utils import translation
 
 
-def index(request, lang):
+def index(request, lang=None):
+    # Если lang не передан явно (например, при странном реверсе), 
+    # используем текущий активный язык или 'en' по умолчанию.
+    if not lang:
+        lang = translation.get_language() or 'en'
+    
     translation.activate(lang)
     context = {
         "LANGUAGE_CODE": lang,
