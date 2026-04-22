@@ -33,16 +33,19 @@ jobs:
         run: python manage.py compilemessages
         env:
           DJANGO_SETTINGS_MODULE: config.prod
+          STATIC_URL: /dj_lp/static/
 
       - name: Collect static files
         run: python manage.py collectstatic --noinput
         env:
           DJANGO_SETTINGS_MODULE: config.prod
+          STATIC_URL: /dj_lp/static/
 
       - name: Generate static site
         run: python manage.py distill-local dist --force
         env:
           DJANGO_SETTINGS_MODULE: config.prod
+          STATIC_URL: /dj_lp/static/
 
       - name: Add .nojekyll
         run: touch dist/.nojekyll
