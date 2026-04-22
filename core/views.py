@@ -1,8 +1,10 @@
 from django.shortcuts import render
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext as _, activate
 
 
-def index(request):
+def index(request, lang=None):
+    if lang:
+        activate(lang)
     context = {
         "page_title": _("Landing Page"),
         "hero_title": _("Modern Solutions for Your Business"),
